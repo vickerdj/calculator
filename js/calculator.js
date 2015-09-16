@@ -17,6 +17,7 @@ var divide = new operator('divide','/',
 
 var ops = [add, subtract, multiply, divide];
 var nums = ['num0','num1','num2','num3','num4','num5','num6','num7','num8','num9','decimal'];
+
 var currentNum = 0;
 var firstNum = 0;
 var operation = "";
@@ -25,6 +26,7 @@ var numOn = true;
 var opOn = true;
 var decOn = false;
 var decCount = 0;
+var precision = 0;
 
 function displayContent(arg) {
 	document.getElementById('monitor-content').innerHTML = arg;};
@@ -39,7 +41,9 @@ for (i=0; i<nums.length; i++) {
 				}; 
 				if (nums[j] != "decimal" && decOn) {
 						decCount -= 1;
-						precision = decCount * -1;
+						if (Math.abs(decCount) > precision) {
+						precision = Math.abs(decCount);
+						};
 						var numPressed = j * Math.pow(10,decCount);
 						currentNum = currentNum + numPressed;
 						content = content + j;
@@ -75,13 +79,15 @@ document.getElementById('equals').onclick = function() {
 	content = operation(firstNum,currentNum).toFixed(precision);
 	displayContent(content);
 	numOn = false;};
+
 document.getElementById('clear').onclick = function() {
 	content = "";
 	displayContent(content);
 	currentNum = 0;
 	firstNum = 0;
-	operation = ""
+	operation = "";
 	numOn = true;
 	opOn = true;
 	decOn = false;
-	decCount = 0;};
+	decCount = 0;
+	precision = 0;};
