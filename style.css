@@ -1,0 +1,105 @@
+/*GLOBAL STYLES------------------------------------*/
+body {
+	background-color: #fff;}
+*, *:after, *:before {	
+	box-sizing: border-box;}
+
+p {
+	text-align: center;
+	margin-top: 25px;
+	font-family: arial;
+	color: #9191B5;
+	font-weight: 500;
+	font-size: 1.5em;}
+
+.container {
+	margin: 2.5% auto;
+	width: 300px;
+	border: 2px solid #9191B5;
+	border-radius: 5px;
+	background-color: #BCCAD7;}
+
+.key-container {
+	margin: 3.5% 5% 5% 5%;}
+
+#monitor {
+	width: 90%;
+	height: 80px;
+	border: 1px solid #9191B5;
+	border-radius: 5px;
+	margin: 5% 5% 0 5%;
+	background: linear-gradient(to top, rgba(237,243,249,1), rgba(237,243,249,0.75));
+	clear: both;}
+
+#monitor-content {
+	text-align: right;
+	margin-top: 12%;
+	margin-right: 5%;
+	font-size: 2.5em;}
+
+.small-key {
+	height: 60px;
+	width: 23.5%;
+	border: 1px solid #9191B5;
+	border-radius: 5px;
+	float: left;
+	margin: 0 2% 2% 0;}
+
+.key-container div:nth-child(4) {
+	margin-right: 0;}
+.key-container div:nth-child(8) {
+	margin-right: 0;}
+.key-container div:nth-child(12) {
+	margin-right: 0;}
+.key-container div:nth-child(15) {
+	margin-right: 0;}
+.key-container div:nth-child(17) {
+	margin-right: 0;}
+
+.big-key {
+	height: 60px;
+	width: 49%;
+	border: 1px solid #9191B5;
+	border-radius: 5px;
+	float: left;
+	margin: 0 2% 2% 0;}
+
+.num{ 
+	position: relative;
+	z-index: 10;}
+
+.num:after {
+    background: linear-gradient(rgba(237,243,249,1), rgba(237,243,249,0.5)); 
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    z-index: -1;}
+
+.not-num{
+	position: relative;
+	z-index: 10;	}
+
+.not-num:after {
+    background: linear-gradient(to top, rgba(237,243,249,0), rgba(237,243,249,0.5)); 
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    z-index: -1;}
+
+.num:hover {
+	background: linear-gradient(to top, rgba(255, 184, 77,0.5), rgba(255, 184, 77,1));}
+
+.not-num:hover {
+	background: linear-gradient(to top, rgba(255, 184, 77,0), rgba(255, 184, 77,0.5));}
+
+.spacer {
+	float: none;
+	clear: both;}
